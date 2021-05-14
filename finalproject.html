@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Nba Basketball adventure</title>
+<link rel = "stylesheet" href="style.css">
+
+<script>
+function getImage()
+{
+  document.getElementById('pic1').innerHTML = "<hr>Click to choose the Los Angeles Lakers <br><img src = 'lakers.png' width = '400px' height = '200px' onclick = 'goToPageOne()'>";
+ document.getElementById('pic2').innerHTML = "<hr>Click to choose the Brooklyn Nets <br><img src = 'nets.png' width = '200px' height = '200px' onclick = 'GoToPageTwo()'>";
+ document.getElementById('pic3').innerHTML = "<hr>Click to choose the Golden State Warriors <br><img src = 'goldenstate.png' width = '200px' height = '200px' onclick = 'GoToPageThree()'>";
+}
+function goToPageOne()
+{
+  window.location.href = "LALakers.html";
+}
+function GoToPageTwo()
+{
+  window.location.href = "Bnets.html";
+}
+function GoToPageThree()
+{
+  window.location.href = "goldenstate.html";
+}
+function hideImage()
+{
+  document.getElementById('pic1').innerHTML = " ";
+document.getElementById('pic2').innerHTML = " ";
+document.getElementById('pic3').innerHTML = " ";
+}
+function showButton()
+{
+  document.getElementById('pic1').innerHTML = "<input type = 'button'value = 'click' onclick = 'getImage()'>";
+
+}
+</script>
+</head>
+
+<body>
+
+
+<h1>Click Ok and choose the team you want</h1>
+<img src = "lakers.png" height="200px" width="200px" onclick = "showButton()">
+<img src = "nets.png" height="200px" width="200px" onclick = "showButton()">
+<img src = "goldenstate.png" height="200px" width="200px" onclick = "showButton()">
+<input type = "button" value = "OK" onclick = "getImage()">
+<input type = "button" value = "GO Away" onclick = "hideImage()">
+<p id = "pic1"></p>
+<p id = "pic2"></p>
+<p id = "pic3"></p>
+</body>

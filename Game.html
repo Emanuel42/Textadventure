@@ -1,0 +1,101 @@
+<html>
+    <head>
+      <script>
+//do the same thing for the other function shoot the ball once the person does a certian amount of shooting and driving they win the game and finals
+var skill = 100;
+         function play()
+         {
+                var x = window.localStorage.getItem('skill');
+                if(x > 100)
+                {
+                    alert(x);
+                }
+                var y = window.localStorage.getItem('Kinjury.png')
+               if(x <= -10)
+                {
+                  document.getElementById('mess').innerHTML = "<img src = 'Kinjury.png'>"
+                  document.getElementById('button').innerHTML = "<input  type = 'button' value = ' your injured you cant play anymore  Go home ' onclick = 'finalproject()'>";
+                  }
+         }
+
+function moves()
+{
+    skill = skill - 20;
+
+    if(skill > 0)
+    {
+      skill = skill - 10;
+
+document.getElementById('mess').innerHTML  = "You earn yourself a bucket  SKILL: " + skill;
+    }
+    else {
+             document.getElementById('mess').innerHTML = "You get injured trying to score   SKILL: " + skill;
+    }
+    window.localStorage.setItem("skill", skill);
+    play();
+}
+function finalproject()
+{
+  window.location.href = "finalproject.html";
+}
+function champions()
+{
+  window.location.href = "champions.html";
+}
+function three()
+{
+    skill = skill - 20;
+
+    if(skill > 0)
+    {
+      skill = skill - 10;
+
+document.getElementById('mess').innerHTML  = "You earn yourself a bucket  SKILL: " + skill;
+    }
+    else {
+             document.getElementById('mess').innerHTML = "You hit the game winning shot   SKILL: " + skill;
+    }
+    window.localStorage.setItem("skill", skill);
+    play2();
+}
+var skill = 100;
+         function play2()
+         {
+                var x = window.localStorage.getItem('skill');
+                if(x > 100)
+                {
+                    alert(x);
+                }
+                var y = window.localStorage.getItem('kobe2.png')
+               if(x <= -10)
+                {
+                  document.getElementById('mess').innerHTML = "<img src = 'kobe2.png'>"
+                  document.getElementById('button').innerHTML = "<input  type = 'button' value = ' you hit the game winning shot: Continue ' onclick = 'champions()'>";
+                  }
+         }
+      </script>
+<style>
+body {
+  background-image: url("goat2.png");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+}
+h1{
+  font-size: 20px;
+  color: #ffff00;
+}
+#mess{
+  color: white;
+  font-size: 20px;
+}
+</style>
+    </head>
+    <body>
+<h1>Every move you do requires a certian amount of skill if you dont have enough skill or run out you lose. do the moves in a certian order to win the game.
+        <input type = "button" onclick = "play()">
+<p  id = "mess"></p>
+<p  id = "button"></p>
+<input type = "button" value = "Drive to the basket" onclick = "moves()">
+<input type = "button" value = "shoot a three pointer" onclick = "three()">
+    </body>
+</html>

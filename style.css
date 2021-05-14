@@ -1,0 +1,26 @@
+
+body {
+  background-image: url("kobe.png");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+}
+h1{
+  font-size: 60px;
+  color: #990099;
+}
+Hr{
+  font-size: 30px;
+  color: #0000ff
+}
+
+.showButton{
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}

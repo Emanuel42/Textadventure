@@ -1,0 +1,61 @@
+<html>
+<head>
+<style>
+body {
+  background-image: url("goldenSTA.png");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+}
+h1{
+  font-size: 20px;
+  color: #ffff00;
+}
+#mess{
+  color: white;
+  font-size: 20px;
+}
+</style>
+  <script>
+  var skill = 0;
+ function practice()
+ {
+     skill = skill + 10;
+
+     if(skill > 100)
+     {
+       skill = skill - 20;
+       document.getElementById('mess').innerHTML = "Take a break! INJURY  SKILL: " + skill;
+     }
+     else {
+        document.getElementById('mess').innerHTML  = "Your hard work pays off  SKILL: " + skill;
+     }
+     window.localStorage.setItem("skill", skill);
+ }
+ function rest()
+ {
+    skill = skill + 5;
+    if(skill > 100)
+    {
+      skill = skill - 20;
+      document.getElementById('mess').innerHTML  = "You cant slack!!!  SKILL: " + skill;
+    }
+    else {
+       document.getElementById('mess').innerHTML  = "Resting is good SKILL: " + skill;
+    }
+    window.localStorage.setItem("skill", skill);
+ }
+ function leave()
+ {
+    window.location.href = "Game2.html";
+ }
+</script>
+</head>
+<body>
+<h1>You are the Warriors. Your goal is to win the finals! every decision you make will affect your end goal.Your team qualified for the finals and now your on game one</h1>
+<br><br><br><br> <p> Your players have played a long season your first playoffs game is tommorow do you pratice or rest?
+<input type = "button" value = "practice" onclick = "practice()">
+<input type = "button" value = "rest" onclick = "rest()">
+<input type = "button" value = "Finish Training" onclick = "leave()">
+<p  id = "mess"></p>
+  </body>
+<html>
